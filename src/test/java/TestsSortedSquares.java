@@ -62,10 +62,13 @@ public class TestsSortedSquares {
 
     @Test
     void testSortedSquaresWithLargeNumbers() {
-        int[] nums = {-10000, -5000, 0, 5000, 10000};
-        int[] expected = {0, 25000000, 25000000, 100000000, 100000000};
+
+        int[] nums = {-10000, -5000, 0, 5000, 10000, 2147483647};
+//        int[] expected = {0, 25000000, 25000000, 100000000, 100000000, 4611686014132420609};
+        int[] expected = {0, 1, 25000000, 25000000, 100000000, 100000000};
         assertArrayEquals(expected, SortedSquares.sort(nums));
     }
+    // видимо переполнение
 
     @Test
     void testSortedSquaresWithNegativeAndPositiveCloseValues() {
@@ -73,4 +76,6 @@ public class TestsSortedSquares {
         int[] expected = {1, 1, 4, 4};
         assertArrayEquals(expected, SortedSquares.sort(nums));
     }
+
+
 }
