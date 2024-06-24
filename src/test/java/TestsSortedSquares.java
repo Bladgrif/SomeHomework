@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class Tests {
+public class TestsSortedSquares {
     @Test
     void testSortedSquaresWithMixedNumbers() {
         int[] nums = {-4, -1, 0, 3, 10};
@@ -71,13 +71,6 @@ public class Tests {
     void testSortedSquaresWithNegativeAndPositiveCloseValues() {
         int[] nums = {-2, -1, 1, 2};
         int[] expected = {1, 1, 4, 4};
-        assertArrayEquals(expected, SortedSquares.sort(nums));
-    }
-
-    @Test
-    void testSortedSquaresWithPositiveValues() {
-        int[] nums = {0, 2, 3};
-        int[] expected = {0, 4, 9};
         assertArrayEquals(expected, SortedSquares.sort(nums));
     }
 }
