@@ -1,5 +1,7 @@
 package SomeHomework;
 
+import java.io.IOException;
+
 public class Task {
 //    Ещё одна задачка свежая: написать функцию которая на вход принимает int n и
 //    возвращает массив длиной n состоящий из уникальных чисел и сумма чисел в массиве равна 0.
@@ -19,6 +21,10 @@ public class Task {
             }
         }
         return arr;
+    }
+
+    public static void Example() throws IOException {
+        throw new IOException();
     }
 
 }
